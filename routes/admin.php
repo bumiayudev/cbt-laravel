@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 
 Route::prefix('admin')->group(function(){
@@ -12,4 +13,5 @@ Route::prefix('admin')->group(function(){
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update')->middleware(['auth', 'Super']);
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy')->middleware(['auth', 'Super']);
     Route::get('/users', [UserController::class, 'index'])->name('user.list')->middleware(['auth', 'Super']);
+    Route::get('/students', [StudentController::class, 'index'])->name('student.list')->middleware(['auth', 'Super']);
 });

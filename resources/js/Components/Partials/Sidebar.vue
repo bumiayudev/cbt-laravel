@@ -35,9 +35,9 @@ let role = computed(() => page.props.auth.user.role);
                 </Link>
             </li>
             <li v class="w-full h-full py-3 px-2 border-b border-light-border">
-                <Link :href="route('user.list')"
+                <Link :href="route('student.list')"
                     class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline"
-                    :active="route().current('user.list')">
+                    :active="route().current('student.list')">
                 <i class="fab fa-wpforms float-left mx-2"></i>
                 Siswa
                 <span><i class="fa fa-angle-right float-right"></i></span>
